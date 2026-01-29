@@ -1,0 +1,33 @@
+@import url(fontawesome-all.min.css);
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300italic,600italic,300,600");
+
+* {
+  box-sizing: border-box;
+}
+
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+}
+
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+  line-height: 1.5;
+  margin: 0 0 1rem 0;
+  letter-spacing: 0.2rem;
+}
+
+    body, input, select, textarea {
+        color: #000000;
+        font-family: "Source Sans Pro", sans-serif;
+        font-weight: 300;
+        font-size: 1rem;
+        line-height: 1.65;
+    }
