@@ -1,0 +1,157 @@
+<!-- 
+
+Welcome to Error's ugly template designed for lazy bums like you to make
+a personal page while doing as little work as possible.
+
+To use this template to customize your page, simply find the comments like
+this one that I will be leaving throughout and follow the instructions I've
+left for you.
+
+All comments will come BEFORE the lines of code they relate to. Don't bother
+with anything that isn't attached to a comment (odds are I only half know 
+what is does myself).
+ 
+ -->
+ 
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        img {
+             display: block;
+             margin-left: auto;
+             margin-right: auto;
+            }
+    </style>
+</head>
+
+<!-- 
+
+To give your contributor page a custom background, replace 
+"overlay.png" on line 48 with the name of the file you want. 
+You can change the font colour on line 28 of cpt.css if it 
+looks bad with the image you chose.
+ 
+    **Errors by Error**
+        If this is NOT working, you've probably made one of two mistakes
+            1) There is a discrepecny between the file name in the code
+                and the name of the file on github. Double, triple check this
+            2) You might not have put your image in the right folder. Make sure
+                your image is in the "images" folder and not a subfolder of it
+ -->
+
+    <head>
+        <style>
+           body { color: black; background-color:white;
+            background-image:url("images/overlay.png"); background-size:cover; background-repeat:repeat ; background-position: q center;
+        }
+        </style>
+    </head>
+    
+<!-- 
+
+Start with line 69, do the same thing you did with the background, and replace
+"aalogo.png" with the name of your image. Everyone's profile image is already
+on the github and should be called sotmhign like "yournamepfp"
+
+Next, replace "YOUR NAME" on line 73 with... your name. 
+I know, I know I shouldn't have made this so uninitutive.
+
+From line 75-81 and below, write in any form of bio you
+want to accompany your name and profile image
+
+ -->
+
+    <header id="header">
+  		<p><br /></p>	
+        <img src="images/aalogo.png" alt="Profile Image" style="height: 175px;" style="Width:50%" />
+		</div>
+		<div class="content">
+			<div class="inner">
+				<h1 style="text-align:center;">YOUR NAME</h1>
+				<p style="text-align:center;">
+                    This is where the first line of your bio goes<br />
+				    Anywhere you want to make a line break using br/ <br />
+                    You can make any given line be really, really, really, really, really, really, really, really, really long in which case it will automatically adjust so that it fits within the page size<br />
+                    Or you can<br />
+                    make each line<br />
+                    really short<br />
+                    You can also put <a href="https://akwardsilince.tumblr.com/">links.</a> Just copy past my formatting with the desired link. <br />
+                </p>
+		    </div>
+		</div>
+
+<!-- 
+
+If you wanted to mess with css, this is where you do it. Just make a new
+css file and call it "errorcpt.css" and replace the current cpt.css on line 93
+
+ -->
+
+<link rel="stylesheet" href="assets/css/cpt.css" />
+
+<!-- 
+
+If you don't feel like getting fancy, you can stop there. 
+If you're happy with just a profile image, a bio and maybe a few links to your important pages, then...
+that's it! 
+We're done, good job team I'm proud of you. 
+
+If you feel like being extra fancy, I've included some super cool, radicalicious bonus content
+below. If you want to show off your cool, super incredibly amazing art on this page, you can use
+the gallery below. 
+If you want to make some fancier links that aren't just underlined text, you can convert these
+images into links (see the middle column, second row for an example of this) to make cool, custom
+buttons
+
+ -->
+
+<p><br /></p>
+
+<h2 style="text-align:center;">My Cool Art!</h1>
+
+<div class="row">
+  <div class="column">
+    <img src="images/aalogo.png" alt="AA" style="width:100%">
+  </div>
+  <div class="column">
+    <img src="images/aalogo.png" alt="AA" style="width:100%">
+  </div>
+  <div class="column">
+    <img src="images/aalogo.png" alt="AA" style="width:100%">
+  </div>
+</div>
+
+<h3 style="text-align:center;">More Cool Art!</h3>
+
+<div class="row">
+  <div class="column">
+    <img src="images/aalogo.png" alt="AA" style="width:100%">
+  </div>
+  <div class="column">
+    <a href="https://akwardsilince.tumblr.com/"><img src="images/aalogo.png" alt="AA" style="width:100%"></a>
+  </div>
+  <div class="column">
+    <img src="images/aalogo.png" alt="AA" style="width:100%">
+  </div>
+</div>
+
+<!-- 
+
+IMPORTANT NOTE:
+
+hmtl really doesn't want to let you put images side by side. It is a firm beleiver that
+stakcing everything onto of eachother is the one true way to be and will try to force
+you to confrom to that system. 
+
+But we are anarchists, we never conform! No matter how annoying the gods of html made this.
+
+If you want your image gallery to display more then three images, you need to edit the css
+in order to do that. Line 10 of cpt.css has a file called "width" which determins how much
+of the page each column gets. It is currently set to 33.33% (each image is entitled to 1/3rd
+of the page) if you want four images, change it to 25% (eahc image gets 1/4). If you want 5 
+images, change it to 20% and so one and so forth. 
+
+ -->
