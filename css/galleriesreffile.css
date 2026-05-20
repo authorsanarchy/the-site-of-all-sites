@@ -2131,3 +2131,19 @@ body, #wrapper {
 #wrapper {
     padding: 2rem 2rem !important; 
 }
+
+
+
+mainpageglow{
+  background:#111;
+  color:#fff;
+  text-shadow:1px 1px 10px #fff, 1px 1px 10px #ccc;
+  font-size:48px;
+  text-align:center;
+}
+
+
+.text-block {
+  max-width: 800px;
+  margin-left: 60px;
+}
