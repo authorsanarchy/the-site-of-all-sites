@@ -1,0 +1,116 @@
+	<link rel="stylesheet" href="assets/css/galleriesreffile.css" />
+   
+
+</div>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body { font-family:sans-serif; display:flex; flex-direction:column; align-items:center; margin:0; padding:20px; }
+.liz-carousel { position: relative; width: 80%; max-width: 600px; margin:40px auto; border-radius:10px; overflow:hidden; background:#000; }
+.liz-slide { display:none; width:100%; }
+.liz-slide img { width:100%; height:auto; display:block; border-radius:10px; transition: transform 0.5s; }
+
+/* Buttons */
+.liz-prev, .liz-next {
+  cursor:pointer;
+  position:absolute;
+  top:50%;
+  transform: translateY(-50%);
+  padding:12px;
+  color:white;
+  font-size:24px;
+  background: rgba(0,0,0,0.4);
+  border-radius:3px;
+  user-select:none;
+  z-index:10;
+}
+.liz-prev { left:10px; }
+.liz-next { right:10px; }
+.liz-prev:hover, .liz-next:hover { background: rgba(0,0,0,0.7); }
+
+/* Barebones gallery */
+@media (max-width:768px){ .liz-prev,.liz-next{font-size:20px;padding:10px;} }
+@media (max-width:480px){ .liz-prev,.liz-next{font-size:18px;padding:8px;} }
+</style>
+</head>
+<body>
+<br> 
+
+<div class="liz-carousel">
+  <div class="liz-slide"><img src="images/ErrorArt/ATE/AlexisKeller.jpg"></div>
+  <div class="liz-slide"><img src="images/ErrorArt/ATE/JasmineMinhas.jpg"></div>
+  <div class="liz-slide"><img src="images/ErrorArt/ATE/NicoleZhou.jpg"></div>
+
+  <a class="liz-prev">&#10094;</a>
+  <a class="liz-next">&#10095;</a>
+</div>
+
+<script>
+(function(){
+  const slides = document.querySelectorAll('.liz-slide');
+  const prev = document.querySelector('.liz-prev');
+  const next = document.querySelector('.liz-next');
+  let index = 0;
+  let timer;
+
+  function showSlide(n){
+    slides.forEach(s => s.style.display='none');
+    slides[n].style.display='block';
+  }
+
+  function nextSlide(){ index = (index+1)%slides.length; showSlide(index);}
+  function prevSlide(){ index = (index-1+slides.length)%slides.length; showSlide(index); }
+
+  next.addEventListener('click',()=>{ nextSlide(); resetTimer(); });
+  prev.addEventListener('click',()=>{ prevSlide(); resetTimer(); });
+
+  function startTimer(){ timer = setInterval(nextSlide,3000);}
+  function resetTimer(){ clearInterval(timer); startTimer(); }
+
+  showSlide(index);
+  startTimer();
+})();
+</script>
+
+<!--dont kill me, i put the js in here -->
+    <script> 
+const slideGallery = document.querySelector('.slides');
+const slides = slideGallery.querySelectorAll('div');
+const scrollbarThumb = document.querySelector('.thumb');
+const slideCount = slides.length;
+const slideHeight = 720;
+const marginTop = 16;
+
+const scrollThumb = () => {
+  const index = Math.floor(slideGallery.scrollTop / slideHeight);
+  scrollbarThumb.style.height = `${((index + 1) / slideCount) * slideHeight}px`;
+};
+
+const scrollToElement = el => {
+  const index = parseInt(el.dataset.id, 10);
+  slideGallery.scrollTo(0, index * slideHeight + marginTop);
+};
+
+document.querySelector('.thumbnails').innerHTML += [...slides]
+  .map(
+    (slide, i) => `<img src="${slide.querySelector('img').src}" data-id="${i}">`
+  )
+  .join('');
+
+document.querySelectorAll('.thumbnails img').forEach(el => {
+  el.addEventListener('click', () => scrollToElement(el));
+});
+
+slideGallery.addEventListener('scroll', e => scrollThumb());
+
+scrollThumb();
+
+    </script>
+  </body>
+</html>
+
+
