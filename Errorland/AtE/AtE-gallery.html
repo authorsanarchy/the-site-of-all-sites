@@ -69,11 +69,7 @@ body { font-family:sans-serif; display:flex; flex-direction:column; align-items:
   next.addEventListener('click',()=>{ nextSlide(); resetTimer(); });
   prev.addEventListener('click',()=>{ prevSlide(); resetTimer(); });
 
-  function startTimer(){ timer = setInterval(nextSlide,3000);}
-  function resetTimer(){ clearInterval(timer); startTimer(); }
-
   showSlide(index);
-  startTimer();
 })();
 </script>
 
