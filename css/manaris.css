@@ -1,4 +1,12 @@
+h1, h2, h3, h4, h5, h6, p {
+  font-family: "IM Fell DW Pica", serif;
+  font-weight: 400;
+  font-style: normal;
+}
 
+		h1 a, h2 a, h3 a, h4 a, h5 a, h6 a, p a {
+			color: inherit;
+		}
 
 .im-fell-dw-pica-regular {
   font-family: "IM Fell DW Pica", serif;
